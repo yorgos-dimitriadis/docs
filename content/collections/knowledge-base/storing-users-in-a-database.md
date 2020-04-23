@@ -18,8 +18,9 @@ Statamic comes with an Eloquent driver to make the transition as seamless as pos
 4. In `config/auth.php`, comment out the `statamic` provider, and uncomment the `eloquent` provider.
 5. Run the `php please auth:migration` command to generates the migration for the role and user group pivot tables.
 6. If you've customized your `user` blueprint, edit the migration so it includes those fields as columns, or create a new migration to add them.
-7. Run `php artisan migrate`
-8. Run a command to migrate your file based users into the database.
+7. Run `composer require doctrine/dbal`. This is required for the migrations to be able to change columns.
+8. Run `php artisan migrate`
+9. Run a command to migrate your file based users into the database.
 
 ### In an existing Laravel app
 
