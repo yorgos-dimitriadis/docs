@@ -201,7 +201,7 @@ protected $stylesheets = [
 ```
 
 This will do two things:
-- Statamic will load the respective files in the Control Panel. It will assume they exist in `public/vendor/[vendor]/[package].js` and `css` directories.
+- Statamic will load the respective files in the Control Panel. It will assume they exist in `public/vendor/[package]/js` and `css` directories.
 - Mark the file for publishing when the `artisan vendor:publish` command is used.
 
 ``` bash
@@ -213,7 +213,7 @@ When an end user installs or updates your addon, the `vendor:publish` command wi
 > During development of your addon, rather than constantly running `vendor:publish`, consider symlinking your directory:
 >
 > ``` bash
-> ln -s /path/to/addons/example/resources public/vendor/example/package
+> ln -s /path/to/addons/example/resources public/vendor/package
 > ```
 
 ### Publishables
@@ -222,9 +222,11 @@ You may also mark generic assets for publishing by providing a `publishables` ar
 
 ``` php
 protected $publishables = [
-    __DIR__.'/../resources/images' => 'images',
+    __DIR__.'/../resources/images' => 'img',
 ];
 ```
+
+This example would copy the images directory into `public/vendor/[package]/img`.
 
 ## Routing
 
