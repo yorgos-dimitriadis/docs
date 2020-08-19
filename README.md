@@ -25,7 +25,7 @@ If you want to work on this project on your local machine, you may follow the in
 
 ## Providing Feedback
 
-We love it when people provide thoughtful feedback! Feel free to open issues on for any content you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+We love it when people provide thoughtful feedback! Feel free to open issues for any content you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
 
 
 ## Contributing
